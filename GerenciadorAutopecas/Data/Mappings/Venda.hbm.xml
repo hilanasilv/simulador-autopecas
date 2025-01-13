@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="GerenciadorAutopecas" namespace="GerenciadorAutopecas.Data.Models">
+	<class name="Venda" table="Venda">
+		<id name="Id" column="Id">
+			<generator class="identity" />
+		</id>
+		<property name="ValorVenda" column="ValorVenda" not-null="true" />
+		<property name="DataVenda" column="DataVenda" not-null="true" />
+		<many-to-one name="Peca" column="IdPeca" class="GerenciadorAutopecas.Data.Models.Pecas" not-null="true" />
+	</class>
+</hibernate-mapping>

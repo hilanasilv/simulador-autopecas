@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="GerenciadorAutopecas" namespace="GerenciadorAutopecas.Data.Models">
+	<class name="Pecas" table="Pecas">
+		<id name="Id" column="Id">
+			<generator class="identity" />
+		</id>
+		<property name="Nome" column="Nome" length="50" not-null="true" />
+		<property name="Fabricante" column="Fabricante" length="50" not-null="true" />
+		<property name="TipoVeiculo" column="TipoVeiculo" length="50" not-null="true" />
+		<property name="Categoria" column="Categoria" length="50" not-null="true" />
+		<property name="PrecoCompra" column="PrecoCompra" not-null="true" />
+		<property name="PrecoVenda" column="PrecoVenda" not-null="true" />
+		<property name="Disponivel" column="Disponivel" not-null="true" />
+		<property name="Status" column="Status" length="50" />
+	</class>
+</hibernate-mapping>
